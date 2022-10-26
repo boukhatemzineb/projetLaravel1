@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 Route::get('/test', function () {
     return view('test');
-});
+})->name('test');
 Route::get('/admin', function () {
     return view('admin');
 });
