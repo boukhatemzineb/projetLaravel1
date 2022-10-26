@@ -14,10 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('administrateur');
 });
 Route::get('/test', function () {
     return view('test');
+});
+Route::get('/admin', function () {
+    return view('admin');
 });
 Auth::routes();
 

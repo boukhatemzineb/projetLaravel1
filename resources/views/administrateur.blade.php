@@ -75,7 +75,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('test')}}" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Liste des prospects</p>
                 </a>
@@ -200,7 +200,7 @@
   
 </div>
 <!-- ./wrapper -->
-                      <!-- REQUIRED SCRIPTS -->
+  <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
