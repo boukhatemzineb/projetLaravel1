@@ -16,9 +16,27 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('administrateur');
 });
-Route::get('/test', function () {
-    return view('test');
-})->name('test');
+Route::get('/contacts', function () {
+    return view('contacts');
+})->name('contacts');
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
+Route::get('/prospect', function () {
+    return view('prospect');
+})->name('prospect');
+Route::get('/opportunite', function () {
+    return view('opportunite');
+})->name('opportunite');
+Route::get('/produit', function () {
+    return view('produit');
+})->name('produit');
+Route::get('/commercial', function () {
+    return view('commercial');
+})->name('commercial');
+Route::get('/client', function () {
+    return view('client');
+})->name('client');
 Route::get('/admin', function () {
     return view('admin');
 });
