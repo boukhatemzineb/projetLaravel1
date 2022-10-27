@@ -75,7 +75,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{route('ListPro')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Liste des prospects</p>
                 </a>
@@ -85,12 +85,10 @@
                   <i class="far fa-circle nav-icon"></i>
                   <p>Ajouter</p>
                 </a>
-              </li> </ul>
+              </li> </ul> </li>
                <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
+     <!-- <nav class="mt-2">-->
+        
           <li class="nav-item menu-open">
             <a href="#" class="nav-link active">
              
@@ -101,7 +99,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{route('ListeCl')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Liste des clients</p>
                 </a>
@@ -111,7 +109,7 @@
                   <i class="far fa-circle nav-icon"></i>
                   <p>Ajouter</p>
                 </a>
-              </li> </ul>
+              </li> </ul></li>
               <!-- Sidebar Menu -->
               <li class="nav-item menu-open">
             <a href="#" class="nav-link active">
@@ -133,7 +131,7 @@
                 <i class="far fa-circle nav-icon"></i>
                   <p>Ajouter</p>
                 </a>
-              </li></ul>
+              </li></ul></li>
               <!-- Sidebar Menu -->
               <li class="nav-item menu-open">
             <a href="#" class="nav-link active">
@@ -155,7 +153,7 @@
                   <i class="far fa-circle nav-icon"></i>
                   <p>Ajouter</p>
                 </a>
-              </li></ul>
+              </li></ul></li>
               <!-- Sidebar Menu -->
               <li class="nav-item menu-open">
             <a href="#" class="nav-link active">
@@ -167,7 +165,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link">
+                <a href="{{route('ListeP')}}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                   <p>Liste des produits</p>
                 </a>
@@ -177,7 +175,7 @@
                   <i class="far fa-circle nav-icon"></i>
                   <p>Ajouter</p>
                 </a>
-              </li></ul>
+              </li></ul></li>
               <!-- Sidebar Menu -->
               <li class="nav-item menu-open">
             <a href="#" class="nav-link active">
@@ -188,8 +186,8 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="./index.html" class="nav-link">
+              <i class="nav-item">
+                <a href="{{route('ListeCo')}}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                   <p>Liste des commerciales</p>
                 </a>
@@ -199,7 +197,8 @@
                   <i class="far fa-circle nav-icon"></i>
                   <p>Ajouter</p>
                 </a>
-              </li></ul>
+              </li></ul></li>
+</ul>
 
 </nav>
 </div> </aside>

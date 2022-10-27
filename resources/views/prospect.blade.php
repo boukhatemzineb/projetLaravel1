@@ -51,11 +51,11 @@
 											<select class="form-select" aria-label="Default select example">
                                             <option value="1">Web</option>
                                             <option value="2">Télephone</option>
-                                            <option value="1">Partenaire</option>
-                                            <option value="2">Salon</option>
-                                            <option value="1">Bouche à oreille</option>
-                                            <option value="2">Liste prospects</option>
-                                            <option value="2">Autre</option>
+                                            <option value="3">Partenaire</option>
+                                            <option value="4">Salon</option>
+                                            <option value="5">Bouche à oreille</option>
+                                            <option value="6">Liste prospects</option>
+                                            <option value="7">Autre</option>
                                            </select>
 										</div> <br>
 										<div class="text-center mt-3">

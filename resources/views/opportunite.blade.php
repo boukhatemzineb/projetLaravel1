@@ -11,47 +11,30 @@
 											<input class="form-control form-control-lg" type="text" name="nom" >
 										</div>
 										<div class="form-group">
-											<label>Prénom</label>
-											<input class="form-control form-control-lg" type="text" name="prenom" >
+											<label>Montant</label>
+											<input class="form-control form-control-lg" type="number" name="montant" >
 										</div>
                                         <div class="form-group">
-											<label>Société</label>
-											<input class="form-control form-control-lg" type="text" name="societe" >
-										</div>
-                                        <div class="form-group">
-											<label>Fonction</label>
-											<input class="form-control form-control-lg" type="text" name="fonction" >
-										</div>
-										<div class="form-group">
-											<label>Email</label>
-											<input class="form-control form-control-lg" type="email" name="email" >
-										</div> </div>
-                                        <div class="col">
-										<div class="form-group">
-											<label>Téléphone</label>
-											<input class="form-control form-control-lg" type="text" name="telephone" >
-										</div>
-                                        <div class="form-group">
-											<label>Adresse</label>
-											<input class="form-control form-control-lg" type="text" name="adresse" >
-										</div>
-                                        <div class="form-group">
-											<label>Site web</label>
-											<input class="form-control form-control-lg" type="url" value="http://" name="site" >
-										</div>
-                                        <div class="form-group">
-											<label>Statut</label> <br>
+											<label>Etape</label> <br>
 											<select class="form-select" aria-label="Default select example">
-                                          
-                                            <option value="1">chaud</option>
-                                            <option value="2">froid</option>
-  
+                                            <option value="1">Prospection</option>
+                                            <option value="2">Proposition/Devis</option>
+                                            <option value="3">Negosiation/Verification</option>
+                                            <option value="4">Cloturée/Gagnée</option>
+                                            <option value="5">Cloturée/Perdue</option>
+                                            
                                            </select>
-										</div><br>
+										</div>
                                         <div class="form-group">
-											<label>Source</label>
-											<input class="form-control form-control-lg" type="text" name="source" >
-										</div> <br>
+											<label>Date de cloture</label>
+											<input class="form-control form-control-lg" type="date" name="date" >
+										</div>
+										<div class="form-group">
+											<label>Client</label>
+											<input class="form-control form-control-lg" type="text" name="client" >
+										</div> 
+                                        <br>
+                                        
 										<div class="text-center mt-3">
 											<a href="index.html" class="btn btn-lg btn-primary">Enregistrer</a>
 											<!-- <button type="submit" class="btn btn-lg btn-primary">Sign up</button> -->
@@ -60,7 +43,7 @@
 								
                                     </div>
 
-                                    
+           <div class="col"></div>                          
 </div>
 </div>
 					
