@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('administrateur');
+    return view('login');
 });
 Route::get('/contacts', function () {
     return view('contacts');
@@ -50,8 +50,8 @@ Route::get('/client', function () {
 Route::get('/ListeCl', function () {
     return view('ListeCl');
 })->name('ListeCl');
-Route::get('/admin', function () {
-    return view('admin');
+Route::get('/administrateur', function () {
+    return view('administrateur');
 });
 Auth::routes();
 
