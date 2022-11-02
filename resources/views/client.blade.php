@@ -1,3 +1,4 @@
+
 @extends('administrateur')
 @section('content')
 

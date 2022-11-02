@@ -54,6 +54,19 @@ Route::get('/administrateur', function () {
     return view('administrateur');
 });
 Auth::routes();
-
+Route::get('/C_client', function () {
+    return view('C_client');
+});
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('/oper', function () {
+    return view('opportunity');
+})->name('/oper');
+Route::get('/infper', function () {
+    return view('infper');
+})->name('/infper');
+Route::get('/firstpage', function () {
+    return view('firstpage');
+});
+Route::get('/facture', function () {
+    return view('facture');
+})->name('/facture');
