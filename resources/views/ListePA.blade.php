@@ -19,7 +19,10 @@
                       <td>description</td>
                       <td>prix</td>
                       <td>quantité</td>
-                      <td>  <button type="button" class="btn btn-warning">Modifier</button> </td>
+                      <td>  <form method="POST">
+                        <a class="btn btn-primary" href="{{route('ProduitA.edit',1)}}">Modifier </a>
+                              </form>
+                             </td>
                   </tbody>
                 </table>
              

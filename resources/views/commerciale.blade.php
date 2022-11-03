@@ -1,12 +1,11 @@
 <html lang="en">
-  
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Administrateur</title>
+  <title>Commerciale</title>
 
   <!-- Google Font: Source Sans Pro -->
-  <link rel="icon" type="image/jfif" href="logo.jfif" />
+  <link rel="icon" type="image/png" href="com.png" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
@@ -35,7 +34,7 @@
       </li>
       
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{route('ContactA.index')}}" class="nav-link">Contacts</a>
+        <a href="{{route('ContactC.index')}}" class="nav-link">Contacts</a>
       </li>
     </ul> 
     </nav>
@@ -44,7 +43,7 @@
     <!-- Brand Logo  -->
     <a href="#" class="brand-link">
       <img src="AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Administrateur</span>
+      <span class="brand-text font-weight-light">Commerciale</span>
     </a>
 
     <!-- Sidebar -->
@@ -52,10 +51,10 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="user8-128x128.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="user1-128x128.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Djellal</a>
+          <a href="#" class="d-block">Amine</a>
         </div>
       </div>
 
@@ -77,13 +76,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('ProspectA.index')}}" class="nav-link">
+                <a href="{{route('ProspectC.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Liste des prospects</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('prospectA')}}" class="nav-link">
+                <a href="{{route('prospectC')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Ajouter</p>
                 </a>
@@ -101,13 +100,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('ClientA.index')}}" class="nav-link">
+                <a href="{{route('ClientC.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Liste des clients</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('clientA')}}" class="nav-link">
+                <a href="{{route('clientC')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Ajouter</p>
                 </a>
@@ -145,61 +144,18 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('OpportuniteA.index')}}" class="nav-link">
+                <a href="{{route('OpportuniteC.index')}}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                   <p>Liste des opportunités</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('opportuniteA')}}" class="nav-link">
+                <a href="{{route('opportuniteC')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Ajouter</p>
                 </a>
               </li></ul></li>
-              <!-- Sidebar Menu -->
-              <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
-            
-              <p>
-                Produits
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('ProduitA.index')}}" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                  <p>Liste des produits</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('produitA')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Ajouter</p>
-                </a>
-              </li></ul></li>
-              <!-- Sidebar Menu -->
-              <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
               
-              <p>
-                Commerciales
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <i class="nav-item">
-                <a href="{{route('CommercialA.index')}}" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                  <p>Liste des commerciales</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('commercialA')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Ajouter</p>
-                </a>
-              </li></ul></li>
 </ul>
 
 </nav>
@@ -211,8 +167,7 @@
 
     <!-- Main content -->
     <div class="content">
-      <div class="container-fluid"> 
-        @yield("content")
+      <div class="container-fluid"> @yield('content')
           </div>
     <!-- /.content -->
   </div>

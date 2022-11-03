@@ -1,11 +1,11 @@
-@extends('administrateur')
+@extends('commerciale')
 @section('content')
 
     <br><br>
                 <table class="table">
                   <thead>
                     <tr>
-                      <th style="width: 10px">Société</th>
+                      <th>Société</th>
                       <th>Téléphone</th>
                       <th>Adresse</th>
                       <th>Site web</th>
@@ -18,8 +18,12 @@
                       <td>Prenom</td>
                       <td>Sociéte</td>
                       <td>Fonction</td>
-                      <td>  <button type="button" class="btn btn-warning">Modifier</button> </td>
-                      <td>  <button type="button" class="btn btn-danger">Supprimer</button> </td>
+                      <td>  <form method="POST">
+                        <a class="btn btn-primary" href="{{route('ClientC.edit',1)}}">Modifier </a>
+                              </form> </td>
+                      <td>  <form method="POST">
+                        <a class="btn btn-danger" href="{{route('ClientC.destroy',1)}}">Supprimer </a>
+                              </form> </td>
                   </tbody>
                 </table>
              

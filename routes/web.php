@@ -1,7 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ProspectAController;
+use App\Http\Controllers\ClientAController;
+use App\Http\Controllers\ProduitAController;
+use App\Http\Controllers\CommercialAController;
+use App\Http\Controllers\ContactAController;
+use App\Http\Controllers\OpportuniteAController;
+use App\Http\Controllers\ProspectCController;
+use App\Http\Controllers\ClientCController;
+use App\Http\Controllers\ContactCController;
+use App\Http\Controllers\OpportuniteCController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,44 +25,57 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('login');
 });
-Route::get('/contacts', function () {
-    return view('contacts');
-})->name('contacts');
-
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
-Route::get('/prospect', function () {
-    return view('prospect');
-})->name('prospect');
-Route::get('/ListPro', function () {
-    return view('ListePro');
-})->name('ListPro');
-Route::get('/opportunite', function () {
-    return view('opportunite');
-})->name('opportunite');
-Route::get('/produit', function () {
-    return view('produit');
-})->name('produit');
-Route::get('/ListeP', function () {
-    return view('ListeP');
-})->name('ListeP');
-Route::get('/commercial', function () {
-    return view('commercial');
-})->name('commercial');
-Route::get('/ListeCo', function () {
-    return view('ListeCo');
-})->name('ListeCo');
-Route::get('/client', function () {
-    return view('client');
-})->name('client');
-Route::get('/ListeCl', function () {
-    return view('ListeCl');
-})->name('ListeCl');
 Route::get('/administrateur', function () {
     return view('administrateur');
 });
-Auth::routes();
+Route::get('/commerciale', function () {
+    return view('commerciale');
+});
+ /* pages ajouter Admin */
+Route::get('/contactA', function () {
+    return view('contactA');
+})->name('contactA');
+Route::get('/prospectA', function () {
+    return view('prospectA');
+})->name('prospectA');
+Route::get('/opportuniteA', function () {
+    return view('opportuniteA');
+})->name('opportuniteA');
+Route::get('/produitA', function () {
+    return view('produitA');
+})->name('produitA');
+Route::get('/commercialA', function () {
+    return view('commercialA');
+})->name('commercialA');
+Route::get('/clientA', function () {
+    return view('clientA');
+})->name('clientA');
+/*------------------------------*/
+ /*page ajouter commerciale */
+ Route::get('/contactC', function () {
+    return view('contactC');
+})->name('contactC');
+Route::get('/clientC', function () {
+    return view('clientC');
+})->name('clientC');
+Route::get('/prospectC', function () {
+    return view('prospectC');
+})->name('prospectC');
+Route::get('/opportuniteC', function () {
+    return view('opportuniteC');
+})->name('opportuniteC');
+ /*--------------------------------*/
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+/* Controlleurs admin */
+Route::resource('ProspectA', ProspectAController::class);
+Route::resource('ClientA', ClientAController::class);
+Route::resource('ProduitA', ProduitAController::class);
+Route::resource('CommercialA', CommercialAController::class);
+Route::resource('ContactA', ContactAController::class);
+Route::resource('OpportuniteA', OpportuniteAController::class);
+/*--------------------------------------------------------*/
+/* Controlleurs commerciale */
+Route::resource('ProspectC', ProspectCController::class);
+Route::resource('ClientC', ClientCController::class);
+Route::resource('ContactC', ContactCController::class);
+Route::resource('OpportuniteC', OpportuniteCController::class);
