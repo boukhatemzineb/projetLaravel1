@@ -28,7 +28,6 @@ Route::get('/', function () {
 Route::get('/administrateur', function () {
     return view('administrateur');
 });
-<<<<<<< HEAD
 Route::get('/commerciale', function () {
     return view('commerciale');
 });
@@ -98,4 +97,4 @@ Route::get('/firstpage', function () {
 Route::get('/facture', function () {
     return view('facture');
 })->name('/facture');
->>>>>>> 5ad4e087663bd76dcb553e41f121a049115c2943
+
