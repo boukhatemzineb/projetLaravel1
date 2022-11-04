@@ -28,6 +28,7 @@ Route::get('/', function () {
 Route::get('/administrateur', function () {
     return view('administrateur');
 });
+<<<<<<< HEAD
 Route::get('/commerciale', function () {
     return view('commerciale');
 });
@@ -79,3 +80,22 @@ Route::resource('ProspectC', ProspectCController::class);
 Route::resource('ClientC', ClientCController::class);
 Route::resource('ContactC', ContactCController::class);
 Route::resource('OpportuniteC', OpportuniteCController::class);
+=======
+Auth::routes();
+Route::get('/C_client', function () {
+    return view('C_client');
+});
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/oper', function () {
+    return view('opportunity');
+})->name('/oper');
+Route::get('/infper', function () {
+    return view('infper');
+})->name('/infper');
+Route::get('/firstpage', function () {
+    return view('firstpage');
+});
+Route::get('/facture', function () {
+    return view('facture');
+})->name('/facture');
+>>>>>>> 5ad4e087663bd76dcb553e41f121a049115c2943
