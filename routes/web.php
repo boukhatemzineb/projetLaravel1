@@ -79,7 +79,7 @@ Route::resource('ProspectC', ProspectCController::class);
 Route::resource('ClientC', ClientCController::class);
 Route::resource('ContactC', ContactCController::class);
 Route::resource('OpportuniteC', OpportuniteCController::class);
-=======
+
 Auth::routes();
 Route::get('/C_client', function () {
     return view('C_client');
