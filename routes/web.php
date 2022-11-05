@@ -28,7 +28,10 @@ Route::get('/', function () {
 Route::get('/administrateur', function () {
     return view('administrateur');
 });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 861bc4a82e3ae451d02146d8918bc3e0d95d70dc
 Route::get('/commerciale', function () {
     return view('commerciale');
 });
@@ -98,5 +101,7 @@ Route::get('/firstpage', function () {
 Route::get('/facture', function () {
     return view('facture');
 })->name('/facture');
+
 Route::get('/prospectA', 'App\Http\Controllers\ProspectAController@AjouterProspectA');
 Route::post('/prospectA', 'App\Http\Controllers\ProspectAController@stokerprospectA');
+
