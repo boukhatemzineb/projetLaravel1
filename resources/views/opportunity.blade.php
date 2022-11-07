@@ -1,4 +1,4 @@
-@extends('client')
+@extends('C_client')
 @section('oper')
 <div class="card col-sm-10">
               <div class="card-header border-0">

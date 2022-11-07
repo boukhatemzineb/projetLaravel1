@@ -1,4 +1,7 @@
-
+   <html>
+    <head> <title> Authentification  </title>
+  </head>
+  <link rel="icon" type="image/jfif" href="login.jfif" />
 <link rel="stylesheet" href="style.css">
     @vite(['resources/js/app.js'])
     <section class="vh-100">
@@ -46,3 +49,4 @@
 </body>
    
 </section>  
+</html>

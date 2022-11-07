@@ -44,7 +44,7 @@
                     </div>
                     <div class="col-lg-8 align-self-baseline">
                         <p class="text-white-75 mb-5"> Confident ,Easy and Simple way to buy a Car !</p>
-                        <a class="btn btn-primary btn-xl" href="#about">Authentification</a>
+                        <a class="btn btn-primary btn-xl" href="{{route('login')}}">Authentification</a>
                     </div>
                 </div>
             </div>
@@ -56,8 +56,8 @@
                     <div class="col-lg-8 text-center">
                         <h2 class="text-white mt-0">About As!</h2>
                         <hr class="divider divider-light" />
-                        <p class="text-white-75 mb-4">Entreprise de gestion relation client <br> tel:06-25-36-89 <br> fix:043-965-741 <br> xxxxx@yahoo.com
-                        <br>RUE 01 novembre Tlemcen </p>
+                        <p class="text-white-75 mb-4">CITROËN ORAN – ETS DJELLAL <br> tel:06-25-36-89 <br> fix:043-965-741 <br> Citroen.entreprises@gbh.fr
+                        <br>Morchid Bir el Djir ORAN </p>
                         
                     </div>
                 </div>

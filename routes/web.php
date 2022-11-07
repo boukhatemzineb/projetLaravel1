@@ -23,15 +23,14 @@ use App\Http\Controllers\OpportuniteCController;
 */
 
 Route::get('/', function () {
-    return view('login');
+    return view('firstpage');
 });
 Route::get('/administrateur', function () {
     return view('administrateur');
 });
-<<<<<<< HEAD
 
-=======
->>>>>>> 861bc4a82e3ae451d02146d8918bc3e0d95d70dc
+
+
 Route::get('/commerciale', function () {
     return view('commerciale');
 });
@@ -95,13 +94,12 @@ Route::get('/oper', function () {
 Route::get('/infper', function () {
     return view('infper');
 })->name('/infper');
-Route::get('/firstpage', function () {
-    return view('firstpage');
-});
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
 Route::get('/facture', function () {
     return view('facture');
 })->name('/facture');
 
-Route::get('/prospectA', 'App\Http\Controllers\ProspectAController@AjouterProspectA');
-Route::post('/prospectA', 'App\Http\Controllers\ProspectAController@stokerprospectA');
+
 

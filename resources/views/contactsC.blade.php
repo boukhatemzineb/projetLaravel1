@@ -13,7 +13,7 @@
                       <th></th>
                       <th></th>
                       <th></th>
-                      <th></th>
+                     
                     </tr>
                   </thead>
                   <tbody>
@@ -30,7 +30,7 @@
                       <td>  <form method="POST">
                         <a class="btn btn-danger" href="{{route('ContactC.destroy',1)}}">Supprimer </a>
                               </form> </td>
-                      <td> <button type="button" class="btn btn-success">Transformer</button> </td>
+                       </td>
                   </tbody>
                 </table>
              

@@ -1,4 +1,4 @@
-@extends('client')
+@extends('C_client')
 @section('oper')
 <div class="container">
   <div class="row">

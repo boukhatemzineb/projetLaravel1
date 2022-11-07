@@ -5,7 +5,7 @@
 <div class="container">
   <div class="row">
     <div class="col">
-	 /*il faut ajouter dans action {{ action('App\Http\Controllers\EtudiantController@ajouterprospectA') }}" */
+
 									<form method="POST" action="{{route('ProspectA.store')}}">
 									@csrf
 										<div class="form-group">
