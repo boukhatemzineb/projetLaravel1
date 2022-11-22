@@ -1,47 +1,56 @@
-@extends('administrateur')
-@section('content')
+<html>
+<head>
+<title>Administrateur</title>
+<link rel="icon" type="image/jfif" href="logo.jfif" />
+@vite(['resources/js/app.js'])
+</head>
 
-<div class="container">
-  <div class="row">
-    <div class="col">
+<body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <br><br>
+     <center><h1> Détails de l'opportunité</h1></center>
+
+    <FONT size="5pt"> <p> <B> Nom :</B>  {{$opportunite->nom}} </p> </FONT>
+    <FONT size="5pt"> <p>  <B>  Etape: </B>  {{$opportunite->etape}} </p> </FONT>
+    <FONT size="5pt"> <p>  <B> Date de cloture : </B> {{$opportunite->date}} </p> </FONT>
+    <FONT size="5pt"> <p>  <B>Client : </B>  {{$opportunite->societe}} </p> </FONT>
+    
+  
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+ Ajouter
+</button> <br>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ajouter Produit</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!--  form -->
+        
 								
-									<form method="POST" action="{{route('OpportuniteA.store')}}">
+									<form method="GET" action="{{route('ajout')}}">
 										@csrf
+                    <input type="number" name="id" value="{{$opportunite->id}}"style="display:none" >
 										<div class="form-group">
 											<label>Nom</label>
 											<input class="form-control form-control-lg" type="text" name="nom" required>
 										</div>
-										<div class="form-group">
-											<label>Montant</label>
-											<input class="form-control form-control-lg" type="number" name="montant" required>
+                    <div class="form-group">
+											<label>Quantite</label>
+											<input class="form-control form-control-lg" type="number" name="quantite" required>
 										</div>
-                                        <div class="form-group">
-											<label>Etape</label> <br>
-											<select class="form-select" aria-label="Default select example" required>
-                                            <option value="1">Prospection</option>
-                                            <option value="2">Proposition/Devis</option>
-                                            <option value="3">Negosiation/Verification</option>
-                                            <option value="4">Cloturée/Gagnée</option>
-                                            <option value="5">Cloturée/Perdue</option>
-                                            
-                                           </select>
-										</div>   
-                                        <div class="form-group">
-											<label>Date de cloture</label>
-											<input class="form-control form-control-lg" type="date" name="date" required>
-										</div>
-										<div class="form-group">
-											<label>Client</label>
-											<input class="form-control form-control-lg" type="text" name="client" required>
-										</div> </div> <div class="col" id="con"> 
+										
+                                     
+										
+                  
                                         
-										<div class="form-group">
-											<label>Nombre de produits</label>
-											<input class="form-control form-control-lg" type="number" name="nombre" id="nombre" onKeydown="fonction()" required>
-										</div> <br> <br>
-										</div>
-										</div>
-</div>
+										
+										
+
 										<center><div class="text-center mt-3">
 											
 											 <button type="submit" class="btn btn-lg btn-primary">Enregistrer</button> 
@@ -52,31 +61,149 @@
 
                       
 
-	<script>
-		function fonction ()
-		{
-			var nbr=document.getElementById('nombre').value;
-			
-			 for(var i=1;i<=nbr;i++){
-				
-			var pro = document.createElement('input');
-             pro.type = 'text';
-             pro.id = i;
-			 pro.value ='Produit'+i;
-			 var q = document.createElement('input');
-             q.type = 'number';
-             q.id = 'q'+i;
-			 q.value='0';
-			 var br = document.createElement('br');
-			 var con = document.getElementById('con');
-             con.appendChild(pro);
-			 con.appendChild(q);
-			 con.appendChild(br);
-			 con.appendChild(br);
-			 
-			 }
-			 
-		}
-	</script>				
+	
+                                    <!-- fin -->
+</div></div>
+      
+   
+  </div>
+</div>
+ <br>
+    <div class="card col-sm-10">
+              <div class="card-header border-0">
+                <h2 class="card-title">Produits</h2>
+                <div class="card-tools">
+                 
+                  <a href="#" class="btn btn-tool btn-sm">
+                    <i class="fas fa-bars"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="card-body table-responsive p-0">
+                <table class="table table-striped table-valign-middle">
+                  <thead>
+                  <tr>
+                    <th>Nom</th>
+                    <th>Quantite</th>
+                    
+                    
+                    
+                    <th></th>
+                    <th></th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                    @foreach($produits as $produit)
+                  <tr>
+                    <td> {{$produit->nom}}</td>
+                    
+                    <td> {{$produit->quantite}}</td>
+                    
+                    
+                   
+                    
+                    <td>
+                    <a 
+                        href="javascript:void(0)"
+                        id="edit-produit"
+                        data-url="{{ route('edit', ['ido'=>$opportunite->id,'idp'=>$produit->produit_id]) }}"
+                        class="btn btn-warning"
+                        >Modifier</a>
+                    
+                    </td>
 
-@endsection
+                    <td> 
+                      
+                    <form method="GET" action="{{route('supprimer')}}">
+                      
+                      @csrf
+                      <input type="number" name="ido" value="{{$opportunite->id}}" style="display:none" >
+                      <input type="number" name="idp" value="{{$produit->produit_id}}" style="display:none" >
+                        <button type="submit" class="btn btn-danger">Supprimer </button>
+                              </form>
+                       </td>
+                  </tr>
+                  @endforeach
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- /.card -->
+          </div>
+
+      <!-- Modal -->
+   <div class="modal fade" id="produiteditModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modifier la quantite</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- form -->
+        <div class="container">
+  <div class="row">
+    <div class="col">
+								
+									<form method="GET" action="{{route('modifier')}}">
+										@csrf
+                    
+                  <input type="number" name="ido" id="ido" value="" style="display:none">
+                  <input type="number" name="idp" id="idp" value="" style="display:none">
+                  
+										
+                    <div class="form-group">
+											<label>Quantite</label>
+											<input class="form-control form-control-lg" type="number" name="quantite" id="produitquantite" value=""required>
+										</div>
+										
+										
+
+										<center><div class="text-center mt-3">
+											
+											 <button type="submit" class="btn btn-lg btn-primary">Enregistrer</button> 
+										</div></center>
+									</form>
+								
+</div>  
+                              
+</div>
+</div>
+   
+									
+      
+        <!-- fin form -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+<a type="button" style="align=right"  class="btn btn-secondary" href="{{route('OpportuniteA.index')}}" >&lt;-- Opportunites</a>
+
+          <script type="text/javascript">
+      
+
+      $('body').on('click', '#edit-produit', function () {
+          var produitURL = $(this).data('url');
+          $.get(produitURL, function (data) {
+            $('#produiteditModal').modal('show');
+            $('#ido').val(data.opportunite_id);
+            $('#idp').val(data.produit_id);
+            $('#produitquantite').val(data.quantite);
+           
+              
+             
+          })
+       });
+       
+      
+          
+</script>  
+</body>
+
+</html>
