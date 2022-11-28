@@ -23,7 +23,7 @@ class ContactAController extends Controller
         $contact->fonction=$request->input('fonction');
         $contact->telephone=$request->input('telephone');
         $contact->email=$request->input('email');
-        $contact->password=$request->input('prenom').'2022';
+        $contact->password=$request->input('nom').'GFRD';
         $client=Client::where('societe','=',$request->input('client'))->first();
         if($client!=null)
         {
@@ -64,4 +64,12 @@ class ContactAController extends Controller
           $contact->delete();
           return redirect()->route('ContactA.index');
         }  
+        public function liste(Request $request)
+        {
+            $s=$request->input('_char');
+            $data=Client::where('societe','LIKE',"{$s}%")->select('societe')->get();
+            
+            return response()->json($data->toArray());
+            
+        }
 }

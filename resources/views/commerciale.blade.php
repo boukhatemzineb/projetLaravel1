@@ -30,12 +30,10 @@
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i> << </a>
       </li>
       
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{route('Contact.index')}}" class="nav-link">Contacts</a>
-      </li>
+      
     </ul> 
     </nav>
   <!-- Main Sidebar Container -->
@@ -83,6 +81,15 @@
              
               <p>
                 Clients
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            </li>
+            <li class="nav-item menu-open">
+            <a href="{{route('Contact.index')}}" class="nav-link active">
+             
+              <p>
+                Contacts
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>

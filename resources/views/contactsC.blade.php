@@ -44,7 +44,11 @@
 										</div>
                                         <div class="form-group">
 											<label>Client</label>
-											<input class="form-control form-control-lg" type="text" name="client" required>
+											<input class="form-control form-control-lg" type="text" name="cli" id="cli" value="" required>
+                      <select class="form-select" aria-label="Default select example"name="client" id="sel"  required>
+                                        
+                                            
+                                           </select> 
 										</div>
                                       
                                          
@@ -266,7 +270,35 @@
           })
        });
        
-      
+       $('#cli').keydown( function() {
+        $('#sel').empty();
+        var select=document.getElementById("sel");
+        
+          
+        var _token=$("input[name='_token']").val();
+        var _char=$("input[name='cli']").val();
+          $.ajax({
+          method:"POST",
+        url:"{{route('ajax')}}",  
+          
+        data:{
+            
+             _token:_token,
+             _char:_char
+            },  
+        dataType: "json",
+        success:function(data)   
+              {  
+                for(let i=0 ;i<data.length;i++ ){
+                newOption = new Option (data[i].societe,data[i].societe);
+                  select.options.add(newOption);
+                }
+                
+                
+              }
+              
+          });    
+      });
           
 </script> 
 @endsection

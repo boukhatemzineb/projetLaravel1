@@ -5,7 +5,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+<br><br>
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Ajouter
 </button><br><br>
@@ -68,7 +68,7 @@
                   <tr>
                     <th>image</th>
                     <th>Nom</th>
-                    <th>Description</th>
+                   
                     <th>prix</th>
                     <th>Quantite</th>
                     
@@ -83,7 +83,7 @@
                     <td><img src="public/{{$produit->image}}" width="200" height="100"/></td>
                     
                     <td>{{$produit->nom}}</td>
-                    <td>{{$produit->description}}</td>
+                   
                     <td>{{$produit->prix}}</td>
                     <td>{{$produit->quantite}}</td>
                     

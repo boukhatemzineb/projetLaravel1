@@ -83,7 +83,7 @@ Route::get('edit/{ido}/{idp}',[App\Http\Controllers\OppsController::class,'edit'
 Route::get('supprimer',[App\Http\Controllers\OppsController::class,'destroy'])->name('supprimer');
  Route::post('/verify',[App\Http\Controllers\HomeController::class, 'index'])->name('verify');
 
- 
+ Route::post('/ajax',[App\Http\Controllers\ContactAController::class, 'liste'])->name('ajax');
 
 
  Route::get('/produit', function () {
