@@ -83,7 +83,7 @@
     </button>
     <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
       <li><a class="dropdown-item" href="{{route('affpr',['id'=>$opportunite->id])}}">Produit</a></li>
-      <li><a class="dropdown-item" href="{{route('afficherevent',['id'=>$client->id}}">Event</a></li>
+      <li><a class="dropdown-item" href="{{route('afficherevent',['id'=>$client->id])}}">Event</a></li>
     </ul>
   </div>
   </td>

@@ -85,8 +85,8 @@
               </p>
             </a>
             </li>
-<<<<<<< HEAD
-=======
+
+
             <li class="nav-item menu-open">
             <a href="{{route('ContactA.index')}}" class="nav-link active">
              
@@ -96,7 +96,7 @@
               </p>
             </a>
             </li>
->>>>>>> 462516b4aa422ba4cfba2ba183dcaecfc8268278
+
               <!-- Sidebar Menu -->
               <li class="nav-item menu-open">
             <a href="{{'EventA.index'}}" class="nav-link active">

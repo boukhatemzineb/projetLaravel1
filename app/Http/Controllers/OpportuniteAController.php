@@ -5,10 +5,10 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Opportunite;
 use App\Models\Client;
-<<<<<<< HEAD
-=======
+
+
 use App\Models\Contact;
->>>>>>> 462516b4aa422ba4cfba2ba183dcaecfc8268278
+
 use App\Models\Opp;
 class OpportuniteAController extends Controller
 {

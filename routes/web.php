@@ -75,15 +75,24 @@ Route::resource('ClientA', ClientAController::class);
 Route::resource('ProduitA', ProduitAController::class);
 Route::resource('CommercialA', CommercialAController::class);
 Route::resource('ContactA', ContactAController::class);
+Route::resource('ContactM', ContactMController::class);
 Route::resource('OpportuniteA', OpportuniteAController::class);
 /*--------------------------------------------------------*/
 /* Controlleurs commerciale */
+Route::resource('EventA', EventAController::class);
 Route::resource('ProspectC', ProspectCController::class);
 Route::resource('ClientC', ClientCController::class);
 Route::resource('ContactC', ContactCController::class);
 Route::resource('OpportuniteC', OpportuniteCController::class);
-
+Route::get('/opper/{id}',[App\Http\Controllers\OpportuniteAController::class,'afficher'])->name('opper');
+Route::get('/affpr/{id}',[App\Http\Controllers\OpportuniteAController::class,'afficher_p'])->name('affpr');
+Route::get('/affevent/{id}',[App\Http\Controllers\EventController::class,'afficherevent'])->name('affevent');
 Auth::routes();
+Route::get('ajout',[App\Http\Controllers\OppsController::class,'store'])->name('ajout');
+Route::get('modifier',[App\Http\Controllers\OppsController::class,'update'])->name('modifier');
+Route::get('edit/{ido}/{idp}',[App\Http\Controllers\OppsController::class,'edit'])->name('edit');
+Route::get('supprimer',[App\Http\Controllers\OppsController::class,'destroy'])->name('supprimer');
+ Route::post('/verify',[App\Http\Controllers\HomeController::class, 'index'])->name('verify');
 Route::get('/C_client', function () {
     return view('C_client');
 });
@@ -97,9 +106,9 @@ Route::get('/infper', function () {
 Route::get('/login', function () {
     return view('login');
 })->name('login');
-Route::get('/facture', function () {
-    return view('facture');
-})->name('/facture');
+Route::get('/user', function () {
+    return view('user');
+})->name('/user');
 
 
 

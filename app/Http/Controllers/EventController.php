@@ -16,7 +16,7 @@ class EventController extends Controller
         $client=$client->client_id;
         $events=Event::where('id','=',$client)->get();
         
-        return view('opportunity',compact('opportunites'));
+        return view('',compact(''));
       }
     public function store(Request $request)
     {
