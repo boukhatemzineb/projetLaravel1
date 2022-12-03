@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,6 +37,12 @@
 </nav>
 
 <div class="card col-sm-6">
+=======
+@extends('C_client')
+@section('oper')
+
+<div class="card col-sm-12">
+>>>>>>> 462516b4aa422ba4cfba2ba183dcaecfc8268278
               <div class="card-header border-0">
                 <h2 class="card-title">Mes Produit</h2>
                 <div class="card-tools">
@@ -49,18 +56,32 @@
                 <table class="table table-striped table-valign-middle">
                   <thead>
                   <tr>
+<<<<<<< HEAD
                     <th>num</th>
                     <th>Produits</th>
                     <th>quantite</th>
+=======
+                    <th>NomProduit : </th>
+                  
+                    <th>Quantite</th>
+>>>>>>> 462516b4aa422ba4cfba2ba183dcaecfc8268278
                     
                   </tr>
                   </thead>
                   <tbody>
+<<<<<<< HEAD
                     @foreach($Opportunites as $opper)
                   <tr>
                     <td>{{$produit->$opper}}</td>
                     <td>{{$produit->$opper}}</td>
                     <td></td>
+=======
+                    @foreach($produits as $produit)
+                  <tr>
+                    <td>{{$produit->nom}}</td>
+                    <td>{{$produit->quantite}}</td>
+                    
+>>>>>>> 462516b4aa422ba4cfba2ba183dcaecfc8268278
                   </tr>
               @endforeach
                   </tbody>
@@ -69,4 +90,8 @@
             </div>
             <!-- /.card -->
           </div>
+<<<<<<< HEAD
     </html>
+=======
+     @endsection     
+>>>>>>> 462516b4aa422ba4cfba2ba183dcaecfc8268278

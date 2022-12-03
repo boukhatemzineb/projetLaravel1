@@ -31,11 +31,9 @@
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i> <<</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{route('ContactA.index')}}" class="nav-link">Contacts</a>
-      </li>
+      
     </ul> 
     </nav>
   <!-- Main Sidebar Container -->
@@ -87,6 +85,18 @@
               </p>
             </a>
             </li>
+<<<<<<< HEAD
+=======
+            <li class="nav-item menu-open">
+            <a href="{{route('ContactA.index')}}" class="nav-link active">
+             
+              <p>
+                Contacts
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            </li>
+>>>>>>> 462516b4aa422ba4cfba2ba183dcaecfc8268278
               <!-- Sidebar Menu -->
               <li class="nav-item menu-open">
             <a href="{{'EventA.index'}}" class="nav-link active">

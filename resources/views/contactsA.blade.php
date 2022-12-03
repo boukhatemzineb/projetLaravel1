@@ -1,6 +1,10 @@
 @extends('administrateur')
 @section('content')
 <br>
+<<<<<<< HEAD
+=======
+<meta name="csrf-token" content="{{csrf_token()}}">
+>>>>>>> 462516b4aa422ba4cfba2ba183dcaecfc8268278
 @vite(['resources/js/app.js'])
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 <br><br>
@@ -22,6 +26,10 @@
     <div class="col">
 					<form method="POST" action="{{route('ContactA.store')}}">
 						@csrf			
+<<<<<<< HEAD
+=======
+
+>>>>>>> 462516b4aa422ba4cfba2ba183dcaecfc8268278
     <div class="form-group">
 											<label>Nom</label>
 											<input class="form-control form-control-lg" type="text" name="nom" required>
@@ -42,16 +50,32 @@
 											<label>Téléphone</label>
 											<input class="form-control form-control-lg" type="text" name="telephone" required>
 										</div>
+<<<<<<< HEAD
                                         <div class="form-group">
 											<label>Client</label>
 											<input class="form-control form-control-lg" type="text" name="client" required>
+=======
+                    <div class="form-group">
+											<label>Client</label> <br>
+											<input class="form-control form-control-lg" type="text" value=""  id="cli" name="cli"  required>
+                      <select class="form-select" aria-label="Default select example"name="client" id="sel"  required>
+                                        
+                                            
+                                           </select>    
+                                                      
+                                        
+>>>>>>> 462516b4aa422ba4cfba2ba183dcaecfc8268278
 										</div>
                                       
                                          
                                          <br>
 										<div class="text-center mt-3">
 											
+<<<<<<< HEAD
 											 <button type="submit" class="btn btn-lg btn-primary">Enregistrer</button> 
+=======
+											 <button type="submit" class="btn btn-lg btn-primary" >Enregistrer</button> 
+>>>>>>> 462516b4aa422ba4cfba2ba183dcaecfc8268278
 										</div>
 									</form>
 								
@@ -211,7 +235,11 @@
 										            <br>
 										<div class="text-center mt-3">
 										
+<<<<<<< HEAD
 											 <button type="submit" class="btn btn-lg btn-primary">Enregistrer</button> 
+=======
+											 <button type="submit" class="btn btn-lg btn-primary" >Enregistrer</button> 
+>>>>>>> 462516b4aa422ba4cfba2ba183dcaecfc8268278
 										</div>
 									</form>
 								
@@ -234,6 +262,10 @@
 </div>
 </div>
 <script type="text/javascript">
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 462516b4aa422ba4cfba2ba183dcaecfc8268278
     $(document).ready(function () {
         
         $('body').on('click', '#show-contact', function () {
@@ -266,7 +298,44 @@
           })
        });
        
+<<<<<<< HEAD
       
+=======
+       $('#cli').keydown( function() {
+        $('#sel').empty();
+        var select=document.getElementById("sel");
+        
+          
+        var _token=$("input[name='_token']").val();
+        var _char=$("input[name='cli']").val();
+          $.ajax({
+          method:"POST",
+        url:"{{route('ajax')}}",  
+          
+        data:{
+            
+             _token:_token,
+             _char:_char
+            },  
+        dataType: "json",
+        success:function(data)   
+              {  
+                for(let i=0 ;i<data.length;i++ ){
+                newOption = new Option (data[i].societe,data[i].societe);
+                  select.options.add(newOption);
+                }
+                
+                
+              }
+              
+          });    
+      });
+                   
+     
+         
+       
+       
+>>>>>>> 462516b4aa422ba4cfba2ba183dcaecfc8268278
           
 </script> 
              
