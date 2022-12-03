@@ -14,15 +14,17 @@ return new class extends Migration
     public function up()
     {
         Schema::create('prospects', function (Blueprint $table) {
-            $table->id();
-            $table->string('nom',50);
-            $table->string('prenom',50);
+            $table->BigIncrements('id');
+            $table->string('nom',20);
+            $table->string('prenom',20);
             $table->string('societe',50);
-            $table->string('fonction',50);
-            $table->string('email',50);
-            $table->string('telephone',20);
+            $table->string('fonction',20);
+            $table->string('email',30);
+            $table->string('telephone',10);
             $table->text('adresse',40);
             $table->string('site',40);
+            $table->string('statut',10);
+            $table->string('source',30);
             $table->timestamps();
         });
     }

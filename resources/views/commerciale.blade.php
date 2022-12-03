@@ -34,7 +34,7 @@
       </li>
       
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{route('ContactC.index')}}" class="nav-link">Contacts</a>
+        <a href="{{route('Contact.index')}}" class="nav-link">Contacts</a>
       </li>
     </ul> 
     </nav>
@@ -54,7 +54,7 @@
           <img src="user1-128x128.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Amine</a>
+          <a href="#" class="d-block"> Mouhammed</a>
         </div>
       </div>
 
@@ -67,50 +67,26 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+            <a href="{{route('ProspectC.index')}}" class="nav-link active">
              
               <p>
                 Prospects
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('ProspectC.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Liste des prospects</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('prospectC')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Ajouter</p>
-                </a>
-              </li> </ul> </li>
+             </li>
                <!-- Sidebar Menu -->
      <!-- <nav class="mt-2">-->
         
           <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+            <a href="{{route('ClientC.index')}}" class="nav-link active">
              
               <p>
                 Clients
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('ClientC.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Liste des clients</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('clientC')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Ajouter</p>
-                </a>
-              </li> </ul></li>
+            </li>
               <!-- Sidebar Menu -->
               <li class="nav-item menu-open">
             <a href="#" class="nav-link active">
@@ -120,41 +96,17 @@
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="./index.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Liste des Rendez vous</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                  <p>Ajouter</p>
-                </a>
-              </li></ul></li>
+            </li>
               <!-- Sidebar Menu -->
               <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+            <a href="{{route('OpportuniteC.index')}}" class="nav-link active">
               
               <p>
                 Opportunités
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('OpportuniteC.index')}}" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                  <p>Liste des opportunités</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('opportuniteC')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Ajouter</p>
-                </a>
-              </li></ul></li>
+            </li>
               
 </ul>
 

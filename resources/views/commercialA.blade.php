@@ -20,10 +20,7 @@
 											<label>Email</label>
 											<input class="form-control form-control-lg" type="email" name="email" required>
 										</div>
-                                        <div class="form-group">
-											<label>Password</label>
-											<input class="form-control form-control-lg" type="text" name="password" required>
-										</div>
+                                        
                                          
                                          <br>
 										<div class="text-center mt-3">

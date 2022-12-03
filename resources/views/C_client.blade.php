@@ -65,7 +65,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
       <img src="AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">client</span>
+      <span class="brand-text font-weight-light">Contact</span>
     </a>
 
     <!-- Sidebar -->
@@ -76,7 +76,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>*/-->
         <div class="info">
-          <a href="#" class="d-block">CLIENT</a>
+          <a href="#" class="d-block">Lahcene</a>
         </div>
       </div>
 
@@ -98,7 +98,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
-            <a href="{{route('/infper')}}" class="nav-link active">
+            <a href="{{route('ContactM.index')}}" class="nav-link active">
               <i class="nav-icon fas "></i>
               <p>
                 Information personelle
@@ -112,16 +112,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <i class="nav-icon fas "></i>
               <p>
                 Oppertunity
-               
-              </p>
-            </a>
-           
-          </li>
-          <li class="nav-item menu-open">
-            <a href="{{route('/facture')}}" class="nav-link active">
-              <i class="nav-icon fas "></i>
-              <p>
-                Facture
                
               </p>
             </a>

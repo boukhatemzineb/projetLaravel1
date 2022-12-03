@@ -54,7 +54,7 @@
           <img src="user8-128x128.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Djellal</a>
+          <a href="#" class="d-block">Djellal Amine</a>
         </div>
       </div>
 
@@ -67,138 +67,66 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+            <a href="{{route('ProspectA.index')}}" class="nav-link active">
              
               <p>
                 Prospects
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('ProspectA.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Liste des prospects</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('prospectA')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Ajouter</p>
-                </a>
-              </li> </ul> </li>
+             </li>
                <!-- Sidebar Menu -->
      <!-- <nav class="mt-2">-->
         
           <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+            <a href="{{route('ClientA.index')}}" class="nav-link active">
              
               <p>
                 Clients
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('ClientA.index')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Liste des clients</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('clientA')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Ajouter</p>
-                </a>
-              </li> </ul></li>
+            </li>
               <!-- Sidebar Menu -->
               <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+            <a href="{{'EventA.index'}}" class="nav-link active">
               
               <p>
                 Rendez vous
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="./index.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Liste des Rendez vous</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                  <p>Ajouter</p>
-                </a>
-              </li></ul></li>
+            </li>
               <!-- Sidebar Menu -->
               <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+            <a href="{{route('OpportuniteA.index')}}" class="nav-link active">
               
               <p>
                 Opportunités
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('OpportuniteA.index')}}" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                  <p>Liste des opportunités</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('opportuniteA')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Ajouter</p>
-                </a>
-              </li></ul></li>
+            </li>
               <!-- Sidebar Menu -->
               <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+            <a href="{{route('Produit.index')}}" class="nav-link active">
             
               <p>
                 Produits
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('ProduitA.index')}}" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                  <p>Liste des produits</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('produitA')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Ajouter</p>
-                </a>
-              </li></ul></li>
+           </li>
               <!-- Sidebar Menu -->
               <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+            <a href="{{route('CommercialA.index')}}" class="nav-link active">
               
               <p>
                 Commerciales
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <i class="nav-item">
-                <a href="{{route('CommercialA.index')}}" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                  <p>Liste des commerciales</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('commercialA')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Ajouter</p>
-                </a>
-              </li></ul></li>
+            </li>
 </ul>
 
 </nav>
