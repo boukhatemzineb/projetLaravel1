@@ -5,7 +5,10 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Opportunite;
 use App\Models\Client;
+
+
 use App\Models\Contact;
+
 use App\Models\Opp;
 use App\Models\produit;
 class OpportuniteAController extends Controller

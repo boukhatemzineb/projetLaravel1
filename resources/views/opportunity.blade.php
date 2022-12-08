@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+@extends('C_client')
+@section('oper')
+=======
 
+>>>>>>> 462516b4aa422ba4cfba2ba183dcaecfc8268278
 <div class="card col-sm-12">
               <div class="card-header border-0">
                 <h2 class="card-title">Mes Opertunity</h2>
@@ -23,6 +28,15 @@
                   </tr>
                   </thead>
                   <tbody>
+<<<<<<< HEAD
+                  
+
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+=======
                    @foreach($opportunites as $opportunite)
 
                   <tr>
@@ -30,12 +44,17 @@
                     <td>{{$opportunite->montant}}</td>
                     <td>{{$opportunite->etape}}</td>
                     <td>{{$opportunite->date}}</td>
+>>>>>>> 462516b4aa422ba4cfba2ba183dcaecfc8268278
                     <td></td>
                     
                     <td></td>
                     <td>
                     <form method="POST">
+<<<<<<< HEAD
+ <a class="btn btn-primary btn-sm" href="{{route('produit')}}"  >Detail </a>
+=======
  <a class="btn btn-primary btn-sm" href="{{route('affpr',['id'=>$opportunite->id])}}"  >Detail </a>
+>>>>>>> 462516b4aa422ba4cfba2ba183dcaecfc8268278
  
                               </form>
                     </td>
@@ -43,7 +62,11 @@
   facture
 </button></td>
                    
+<<<<<<< HEAD
+                  </tr> </tbody>
+=======
                   </tr> @endforeach</tbody>
+>>>>>>> 462516b4aa422ba4cfba2ba183dcaecfc8268278
                 </table>
               </div>
             </div>
@@ -118,4 +141,8 @@
     
       </div></form>
 	  </div></div></div>
+<<<<<<< HEAD
+          @endsection
+=======
           
+>>>>>>> 462516b4aa422ba4cfba2ba183dcaecfc8268278

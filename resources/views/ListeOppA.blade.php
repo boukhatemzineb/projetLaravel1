@@ -45,11 +45,15 @@
 										</div>
 										<div class="form-group">
 											<label>Client</label>
+<<<<<<< HEAD
+											<input class="form-control form-control-lg" type="text" name="client" required>
+=======
 											<input class="form-control form-control-lg" type="text" value=""name="cli"  id="cli" required>
                       <select class="form-select" aria-label="Default select example"name="client" id="sel"  required>
                                         
                                             
                                            </select> 
+>>>>>>> 462516b4aa422ba4cfba2ba183dcaecfc8268278
 										</div> 
                   </div> 
                                         
@@ -268,6 +272,9 @@
           })
        });
        
+<<<<<<< HEAD
+      
+=======
        $('#cli').keydown( function() {
         $('#sel').empty();
         var select=document.getElementById("sel");
@@ -297,6 +304,7 @@
               
           });    
       });
+>>>>>>> 462516b4aa422ba4cfba2ba183dcaecfc8268278
           
 </script>             
 

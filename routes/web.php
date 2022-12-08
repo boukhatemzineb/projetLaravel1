@@ -1,16 +1,15 @@
 <?php
 
-
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProspectAController;
 use App\Http\Controllers\ClientAController;
-use App\Http\Controllers\ProduitController;
+use App\Http\Controllers\ProduitAController;
 use App\Http\Controllers\CommercialAController;
 use App\Http\Controllers\ContactAController;
 use App\Http\Controllers\OpportuniteAController;
 use App\Http\Controllers\ProspectCController;
 use App\Http\Controllers\ClientCController;
-use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ContactCController;
 use App\Http\Controllers\OpportuniteCController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OppsController;
@@ -28,33 +27,66 @@ use App\Http\Controllers\ContactMController;
 */
 
 Route::get('/', function () {
-   
     return view('firstpage');
 });
 Route::get('/administrateur', function () {
-   
     return view('administrateur');
 });
+
+
+
 Route::get('/commerciale', function () {
-   
     return view('commerciale');
 });
-
-
+ /* pages ajouter Admin */
+Route::get('/contactA', function () {
+    return view('contactA');
+})->name('contactA');
+Route::get('/prospectA', function () {
+    return view('prospectA');
+})->name('prospectA');
+Route::get('/opportuniteA', function () {
+    return view('opportuniteA');
+})->name('opportuniteA');
+Route::get('/produitA', function () {
+    return view('produitA');
+})->name('produitA');
+Route::get('/commercialA', function () {
+    return view('commercialA');
+})->name('commercialA');
+Route::get('/clientA', function () {
+    return view('clientA');
+})->name('clientA');
+/*------------------------------*/
+ /*page ajouter commerciale */
+ Route::get('/contactC', function () {
+    return view('contactC');
+})->name('contactC');
+Route::get('/clientC', function () {
+    return view('clientC');
+})->name('clientC');
+Route::get('/prospectC', function () {
+    return view('prospectC');
+})->name('prospectC');
+Route::get('/opportuniteC', function () {
+    return view('opportuniteC');
+})->name('opportuniteC');
+ /*--------------------------------*/
 
 /* Controlleurs admin */
 Route::resource('ProspectA', ProspectAController::class);
 Route::resource('ClientA', ClientAController::class);
-Route::resource('Produit', ProduitController::class);
+Route::resource('ProduitA', ProduitAController::class);
 Route::resource('CommercialA', CommercialAController::class);
 Route::resource('ContactA', ContactAController::class);
+Route::resource('ContactM', ContactMController::class);
 Route::resource('OpportuniteA', OpportuniteAController::class);
-Route::get('OpportuniteA/{$id}/edit','OppotuniteAController@edit')->name('opportunite-edit');
 /*--------------------------------------------------------*/
 /* Controlleurs commerciale */
+Route::resource('EventA', EventAController::class);
 Route::resource('ProspectC', ProspectCController::class);
 Route::resource('ClientC', ClientCController::class);
-Route::resource('Contact', ContactController::class);
+Route::resource('ContactC', ContactCController::class);
 Route::resource('OpportuniteC', OpportuniteCController::class);
 Route::resource('ContactM', ContactMController::class);
 Route::get('/opper/{id}', [App\Http\Controllers\OpportuniteAController::class, 'afficher'])->name('opper');
@@ -68,7 +100,7 @@ Route::resource('Event', EventController::class);
 Route::get('/index1/{id}',[App\Http\Controllers\EventController::class,'index1'])->name('index1');
 Route::get('/C_client', function () {
     return view('C_client');
-})->name('C_client');
+});
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/oper', function () {
     return view('opportunity');
@@ -111,5 +143,3 @@ Route::get('supprimer',[App\Http\Controllers\OppsController::class,'destroy'])->
  Route::get('/produit', function () {
 
     return view('produit');
-
-})->name('produit');

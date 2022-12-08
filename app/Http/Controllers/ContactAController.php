@@ -23,7 +23,11 @@ class ContactAController extends Controller
         $contact->fonction=$request->input('fonction');
         $contact->telephone=$request->input('telephone');
         $contact->email=$request->input('email');
+<<<<<<< HEAD
+        $contact->password=$request->input('prenom').'2022';
+=======
         $contact->password=$request->input('nom').'GFRD';
+>>>>>>> 462516b4aa422ba4cfba2ba183dcaecfc8268278
         $client=Client::where('societe','=',$request->input('client'))->first();
         if($client!=null)
         {
@@ -64,6 +68,8 @@ class ContactAController extends Controller
           $contact->delete();
           return redirect()->route('ContactA.index');
         }  
+<<<<<<< HEAD
+=======
         public function liste(Request $request)
         {
             $s=$request->input('_char');
@@ -72,4 +78,5 @@ class ContactAController extends Controller
             return response()->json($data->toArray());
             
         }
+>>>>>>> 462516b4aa422ba4cfba2ba183dcaecfc8268278
 }

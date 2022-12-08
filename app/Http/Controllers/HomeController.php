@@ -26,7 +26,11 @@ class HomeController extends Controller
            }
            $contact=Contact::where([['email','=',$request->email],['password','=',$request->password]])->first();  
             if($contact!=null)
+
+            return redirect()->route('infper',compact('contact'));
+            
             return redirect()->route('C_client');
+
             return redirect()->route('login');
     }
 }
