@@ -14,7 +14,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\OpportuniteCController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OppsController;
-
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\ContactMController;
 /*
 |--------------------------------------------------------------------------
@@ -59,8 +59,13 @@ Route::resource('OpportuniteC', OpportuniteCController::class);
 Route::resource('ContactM', ContactMController::class);
 Route::get('/opper/{id}', [App\Http\Controllers\OpportuniteAController::class, 'afficher'])->name('opper');
 Route::get('/affpr/{id}', [App\Http\Controllers\OpportuniteAController::class, 'afficher_p'])->name('affpr');
-
+Route::get('/affevent/{id}',[App\Http\Controllers\EventController::class,'afficher'])->name('affevent');
 Auth::routes();
+Route::get('/user', function () {
+    return view('user');
+})->name('user');
+Route::resource('Event', EventController::class);
+Route::get('/index1/{id}',[App\Http\Controllers\EventController::class,'index1'])->name('index1');
 Route::get('/C_client', function () {
     return view('C_client');
 })->name('C_client');
@@ -82,10 +87,27 @@ Route::get('modifier',[App\Http\Controllers\OppsController::class,'update'])->na
 Route::get('edit/{ido}/{idp}',[App\Http\Controllers\OppsController::class,'edit'])->name('edit');
 Route::get('supprimer',[App\Http\Controllers\OppsController::class,'destroy'])->name('supprimer');
  Route::post('/verify',[App\Http\Controllers\HomeController::class, 'index'])->name('verify');
+ Route::get('ajout2',[App\Http\Controllers\OppsController::class,'store2'])->name('ajout2');
+ Route::get('modifier2',[App\Http\Controllers\OppsController::class,'update2'])->name('modifier2');
+ Route::get('supprimer2',[App\Http\Controllers\OppsController::class,'destroy2'])->name('supprimer2');
+ Route::get('/transformer/{id}',[App\Http\Controllers\ProspectAController::class,'transformer'])->name('transformer');
 
  Route::post('/ajax',[App\Http\Controllers\ContactAController::class, 'liste'])->name('ajax');
+ Route::post('/ajax2',[App\Http\Controllers\OpportuniteAController::class, 'liste'])->name('ajax2');
+
+ Route::get('supprimer1',[App\Http\Controllers\ClientAController::class,'destroy1'])->name('supprimer1');
+ Route::get('modifier1',[App\Http\Controllers\ClientAController::class,'update1'])->name('modifier1');
+ Route::get('ajouterC',[App\Http\Controllers\ClientAController::class,'ajouter'])->name('ajouterC');
+ Route::get('edit2/{id}',[App\Http\Controllers\ClientAController::class,'edit2'])->name('edit2');
+
+ Route::get('supprimer2',[App\Http\Controllers\OpportuniteAController::class,'destroy1'])->name('supprimer2');
+ Route::get('modifier2',[App\Http\Controllers\OpportuniteAController::class,'update1'])->name('modifier2');
+ Route::get('ajouterO',[App\Http\Controllers\OpportuniteAController::class,'ajouter'])->name('ajouterO');
 
 
+
+ Route::get('modifierevent',[App\Http\Controllers\EventController::class,'update'])->name('modifierevent');
+ Route::get('suprimerevent',[App\Http\Controllers\EventController::class,'destroy'])->name('suprimerevent');
  Route::get('/produit', function () {
 
     return view('produit');

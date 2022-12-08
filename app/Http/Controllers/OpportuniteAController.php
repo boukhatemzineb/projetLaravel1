@@ -7,6 +7,7 @@ use App\Models\Opportunite;
 use App\Models\Client;
 use App\Models\Contact;
 use App\Models\Opp;
+use App\Models\produit;
 class OpportuniteAController extends Controller
 {
     public function index()
@@ -35,7 +36,7 @@ class OpportuniteAController extends Controller
         
         $opportunite=DB::table('opportunites')->join('clients',function ($join) use($id){$join->on('clients.id','=','opportunites.client_id')->where('opportunites.id','=',$id);})->select('opportunites.*','clients.societe')->first();
         $produits=DB::table('opps')->join('produit',function ($join) use($id){$join->on('produit.id','=','opps.produit_id')->where('opps.opportunite_id','=',$id);})->select('opps.*','produit.nom')->get();
-        return view('opportuniteA',compact('opportunite','produits')); ;
+        return view('opportuniteA',compact('opportunite','produits')); 
         
 
     }
@@ -67,9 +68,9 @@ class OpportuniteAController extends Controller
       }  
       public function afficher($id)
       {
-        $client=Contact::find($id);
-        $client=$client->client_id;
-        $opportunites=Opportunite::where('id','=',$client)->get();
+        /*$client=Contact::find($id);
+        $client=$client->client_id;*/
+        $opportunites=Opportunite::where('id','=',1)->get();
         
         return view('opportunity',compact('opportunites'));
       }
@@ -78,5 +79,44 @@ class OpportuniteAController extends Controller
         $produits=DB::table('opps')->join('produit',function ($join) use($id){$join->on('produit.id','=','opps.produit_id')->where('opps.opportunite_id','=',$id);})->select('opps.*','produit.nom')->get();
         return view('produit',compact('produits'));
     
+      }
+      public function liste(Request $request)
+      {
+          $s=$request->input('_char');
+          $data=Produit::where('nom','LIKE',"{$s}%")->select('nom')->get();
+          
+          return response()->json($data->toArray());
+          
+      }
+      public function ajouter(Request $request)
+      {
+        $opportunite = new Opportunite();
+        $opportunite->nom=$request->input('nom');
+        $opportunite->etape=$request->input('etape');
+        $opportunite->date=$request->input('date');
+        
+            $opportunite->client_id=$request->id;
+            $opportunite->save();
+           
+            return redirect()->route('ClientA.show',$request->id);
+      }
+      public function update1(Request $request)
+      {
+        $opportunite=Opportunite::find($request->id);
+        $opportunite->nom=$request->input('nom');
+        $opportunite->etape=$request->input('etape');
+        $opportunite->date=$request->input('date');
+        $opportunite->client_id=$request->input('client');
+        $opportunite->save();
+           
+            return redirect()->route('ClientA.show',$request->client);
+     
+
+      }
+      public function destroy1(Request $request)
+      {
+        $opportunite=Opportunite::find($request->ido);
+        $opportunite->delete();
+        return redirect()->route('ClientA.show',$request->idc);
       }
 }

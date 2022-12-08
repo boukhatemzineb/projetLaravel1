@@ -114,9 +114,9 @@
                     
                     <td>
                     <a 
-                        href="javascript:void(0)"
-                        id="show-contact"
-                        data-url="{{route('ContactA.show', $contact->id)}}"
+                        href="{{route('index1',['id'=>$contact->id])}}"
+                        
+                       
                         class="btn btn-info"
                         >Détails</a>
                     

@@ -34,12 +34,16 @@
         <!--  form -->
         
 								
-									<form method="GET" action="{{route('ajout')}}">
+									<form method="GET" action="{{route('ajout2')}}">
 										@csrf
                     <input type="number" name="id" value="{{$opportunite->id}}"style="display:none" >
 										<div class="form-group">
 											<label>Nom</label>
-											<input class="form-control form-control-lg" type="text" name="nom" required>
+											<input class="form-control form-control-lg" type="text" name="nom"  id="nom"required>
+                      <select class="form-select" aria-label="Default select example"name="produit" id="sel"  required>
+                                        
+                                            
+                                        </select> 
 										</div>
                     <div class="form-group">
 											<label>Quantite</label>
@@ -116,7 +120,7 @@
 
                     <td> 
                       
-                    <form method="GET" action="{{route('supprimer')}}">
+                    <form method="GET" action="{{route('supprimer2')}}">
                       
                       @csrf
                       <input type="number" name="ido" value="{{$opportunite->id}}" style="display:none" >
@@ -148,7 +152,7 @@
   <div class="row">
     <div class="col">
 								
-									<form method="GET" action="{{route('modifier')}}">
+									<form method="GET" action="{{route('modifier2')}}">
 										@csrf
                     
                   <input type="number" name="ido" id="ido" value="" style="display:none">
@@ -203,7 +207,35 @@
           })
        });
        
-      
+       $('#nom').keydown( function() {
+        $('#sel').empty();
+        var select=document.getElementById("sel");
+        
+          
+        var _token=$("input[name='_token']").val();
+        var _char=$("input[name='nom']").val();
+          $.ajax({
+          method:"POST",
+        url:"{{route('ajax2')}}",  
+          
+        data:{
+            
+             _token:_token,
+             _char:_char
+            },  
+        dataType: "json",
+        success:function(data)   
+              {  
+                for(let i=0 ;i<data.length;i++ ){
+                newOption = new Option (data[i].nom,data[i].nom);
+                  select.options.add(newOption);
+                }
+                
+                
+              }
+              
+          });    
+      });
           
 </script>  
 </body>

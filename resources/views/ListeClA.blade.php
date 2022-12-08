@@ -99,9 +99,9 @@
                     
                     <td>
                     <a 
-                        href="javascript:void(0)"
-                        id="show-client"
-                        data-url="{{route('ClientA.show', $client->id)}}"
+                        href="{{ route('ClientA.show', $client->id) }}"
+                        
+                        
                         class="btn btn-info"
                         >Détails</a>
                     
@@ -111,7 +111,7 @@
                     <a 
                         href="javascript:void(0)"
                         id="edit-client"
-                        data-url="{{ route('ClientA.show', $client->id) }}"
+                        data-url="{{ route('ClientA.edit', $client->id) }}"
                         class="btn btn-warning"
                         >Modifier</a>
                     
@@ -134,27 +134,7 @@
             <!-- /.card -->
           </div>
           <!-- Modal -->
-<div class="modal fade" id="clientShowModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Détails Client</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p><strong>Société:</strong> <span id="client-societe"></span></p>
-        <p><strong>Téléphone:</strong> <span id="client-telephone"></span></p>
-        <p><strong>Adresse:</strong> <span id="client-adresse"></span></p>
-        <p><strong>Site web:</strong> <span id="client-site"></span></p>
-        
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
+
    <!-- Modal -->
    <div class="modal fade" id="clienteditModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -217,20 +197,7 @@
 </div>
 </div>
 <script type="text/javascript">
-    $(document).ready(function () {
-        
-        $('body').on('click', '#show-client', function () {
-          var clientURL = $(this).data('url');
-          $.get(clientURL, function (data) {
-            $('#clientShowModal').modal('show');
-              $('#client-societe').text(data.societe);
-              $('#client-telephone').text(data.telephone);
-              $('#client-adresse').text(data.adresse);
-              $('#client-site').text(data.site);
-             
-          })
-       });
-      });  
+    
 
       $('body').on('click', '#edit-client', function () {
           var clientURL = $(this).data('url');

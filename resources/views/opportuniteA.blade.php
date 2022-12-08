@@ -37,35 +37,23 @@
                     <input type="number" name="id" value="{{$opportunite->id}}"style="display:none" >
 										<div class="form-group">
 											<label>Nom</label>
-											<input class="form-control form-control-lg" type="text" name="nom" required>
+											<input class="form-control form-control-lg" type="text" name="nom" id="nom" required>
+                      <select class="form-select" aria-label="Default select example"name="produit" id="sel"  required>
+                                        
+                                            
+                                        </select> 
 										</div>
                     <div class="form-group">
 											<label>Quantite</label>
 											<input class="form-control form-control-lg" type="number" name="quantite" required>
 										</div>
-										
-                                     
-										
-                  
-                                        
-										
-										
-
 										<center><div class="text-center mt-3">
-											
 											 <button type="submit" class="btn btn-lg btn-primary">Enregistrer</button> 
 										</div></center>
 									</form>
-								
-                                   
-
-                      
-
 	
                                     <!-- fin -->
 </div></div>
-      
-   
   </div>
 </div>
  <br>
@@ -201,7 +189,35 @@
           })
        });
        
-      
+       $('#nom').keydown( function() {
+        $('#sel').empty();
+        var select=document.getElementById("sel");
+        
+          
+        var _token=$("input[name='_token']").val();
+        var _char=$("input[name='nom']").val();
+          $.ajax({
+          method:"POST",
+        url:"{{route('ajax2')}}",  
+          
+        data:{
+            
+             _token:_token,
+             _char:_char
+            },  
+        dataType: "json",
+        success:function(data)   
+              {  
+                for(let i=0 ;i<data.length;i++ ){
+                newOption = new Option (data[i].nom,data[i].nom);
+                  select.options.add(newOption);
+                }
+                
+                
+              }
+              
+          });    
+      });
           
 </script>  
 </body>

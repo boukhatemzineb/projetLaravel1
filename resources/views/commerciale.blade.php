@@ -95,15 +95,7 @@
             </a>
             </li>
               <!-- Sidebar Menu -->
-              <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
               
-              <p>
-                Rendez vous
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            </li>
               <!-- Sidebar Menu -->
               <li class="nav-item menu-open">
             <a href="{{route('OpportuniteC.index')}}" class="nav-link active">

@@ -66,4 +66,5 @@ class ContactController extends Controller
           $contact->delete();
           return redirect()->route('Contact.index');
         }  
+        
 }

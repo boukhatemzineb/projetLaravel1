@@ -111,6 +111,7 @@
                     <th></th>
                     <th></th>
                     <th></th>
+                    <th> </th>
                   </tr>
                   </thead>
                   <tbody>
@@ -140,14 +141,15 @@
                         >Modifier</a>
                     
                     </td>
-
+                    
+                       <td> <a  href="{{route('transformer',['id'=>$prospect->id])}}"class="btn btn-success" > Transformer</a> </td>
                     <td> 
                     <form method="POST" action="{{route('ProspectA.destroy',$prospect->id)}}">
                       @method('DELETE')
                       @csrf
                         <button  class="btn btn-danger">Supprimer </button>
                               </form>
-                       </td>
+                              </td>
                   </tr>
                   @endforeach
                     

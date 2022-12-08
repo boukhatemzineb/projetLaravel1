@@ -10,7 +10,7 @@ class OppsController extends Controller
 {
     public function store(Request $request)
     {
-        $produit=Produit::where('nom','=',$request->nom)->first();
+        $produit=Produit::where('nom','=',$request->produit)->first();
         if($produit!=null)
         {
             $opp = new Opp;
@@ -40,5 +40,30 @@ class OppsController extends Controller
         $produit=Opp::where([['opportunite_id','=',$request->ido],['produit_id','=',$request->idp]])->delete();
         
         return redirect()->route('OpportuniteA.show',$request->ido);
+    }
+    public function store2(Request $request)
+    {
+        $produit=Produit::where('nom','=',$request->produit)->first();
+        if($produit!=null)
+        {
+            $opp = new Opp;
+            $opp->opportunite_id=$request->id;
+            $opp->produit_id=$produit->id;
+            $opp->quantite=$request->quantite;
+            $opp->save();
+        }
+        return redirect()->route('OpportuniteC.show',$request->id);
+    }
+    public function update2(Request $request)
+    {
+        $produit=Opp::where([['opportunite_id','=',$request->ido],['produit_id','=',$request->idp]])->update(['quantite'=>$request->quantite]);
+        return redirect()->route('OpportuniteC.show',$request->ido);
+
+    }
+    public function destroy2(Request $request)
+    {
+        $produit=Opp::where([['opportunite_id','=',$request->ido],['produit_id','=',$request->idp]])->delete();
+        
+        return redirect()->route('OpportuniteC.show',$request->ido);
     }
 }
